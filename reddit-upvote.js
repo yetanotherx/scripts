@@ -25,9 +25,7 @@ var runUpvote = function(delay, minscore) {
 	});
 	
 	for( var counter = 1; counter <= runSingleUpvote.length; counter++ ) {
-		window.setTimeout(function() {
-			runSingleUpvote[counter - 1]();
-		}, counter * delay);
+		window.setTimeout(runSingleUpvote[counter - 1], counter * delay);
 	}
 };
 
