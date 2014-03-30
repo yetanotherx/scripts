@@ -6,9 +6,9 @@
  * 
  * Usage: Can be used as either a bookmarklet or directly.
  * For bookmarklet: Copy/Paste this code into a new bookmark:
- *     javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://raw.githubusercontent.com/yetanotherx/scripts/master/reddit-upvote.js';})();
+ *     javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://raw.githubusercontent.com/yetanotherx/scripts/master/reddit-upvote.js';runUpvote(500, -3);})();
  * For direct: Copy the above code into the address bar. If using Chrome, you may have to manually type "javascript:" beforehand.
- *
+ * To configure, adjust the parameters in the bookmarklet.
  ************************************************************************************************/
 var runUpvote = function(delay, minscore) { 
 	var runSingleUpvote = []; 
@@ -34,5 +34,3 @@ var runUpvote = function(delay, minscore) {
 		window.setTimeout(runSingleUpvote[counter - 1], counter * delay);
 	}
 };
-
-runUpvote(500, -3);
